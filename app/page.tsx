@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero/Hero";
 import Link from "next/link";
 import { Reveal } from "@/components/Motion";
 import { services } from "@/lib/services";
@@ -30,72 +31,7 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="homeHero">
-        <div className="homeHeroMedia" aria-hidden="true">
-          <img
-            src="/images/hero.jpg"
-            alt=""
-          />
-
-          <div className="homeHeroOverlay" />
-        </div>
-
-        <div className="heroCopy">
-          <Reveal>
-            <span className="eyebrow">
-              S.W.A.T. Sicherheit & Service GmbH
-            </span>
-          </Reveal>
-
-          <Reveal delay={0.08}>
-            <h1>
-              Sicherheit, die sichtbar{" "}
-              <em>Vertrauen schafft.</em>
-            </h1>
-          </Reveal>
-
-          <Reveal delay={0.16}>
-            <p>
-              Professionelle Sicherheitsdienstleistungen in Oldenburg,
-              Niedersachsen, Hamburg und bundesweit – mit geschultem
-              Personal, klaren Abläufen und persönlicher Erreichbarkeit.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.24} className="heroActions">
-            <Link
-              className="button buttonGold"
-              href="/kontakt"
-            >
-              Kostenloses Erstgespräch
-            </Link>
-
-            <Link
-              className="button buttonGhost"
-              href="/leistungen"
-            >
-              Leistungen ansehen
-            </Link>
-          </Reveal>
-
-          <Reveal delay={0.32}>
-            <div className="heroAvailability">
-              <strong>24/7</strong>
-
-              <span>
-                Erreichbar
-                <br />
-                und einsatzbereit
-              </span>
-            </div>
-          </Reveal>
-        </div>
-
-        <div className="heroScrollIndicator">
-          <span>Scroll</span>
-          <div />
-        </div>
-      </section>
+      <Hero />
 
       <section className="trustStrip">
         {trustItems.map((item) => (
