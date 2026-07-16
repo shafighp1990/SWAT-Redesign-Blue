@@ -1,0 +1,3 @@
+import type { Metadata } from "next"; import { ContactForm } from "@/components/ContactForm";
+export const metadata: Metadata={title:"Kontakt"};
+export default function Page(){return <><section className="simpleHero"><span className="eyebrow">Kontakt</span><h1>Sprechen wir über Ihre Sicherheit.</h1><p>Wir melden uns schnellstmöglich zurück.</p></section><section className="contactSection"><aside><h2>S.W.A.T. Sicherheit & Service GmbH</h2><p>Alexanderstraße 172<br/>26121 Oldenburg</p><p><a href="tel:+491727143714">0172 7143714</a><br/><a href="mailto:info@swat-sicherheitsservice.de">info@swat-sicherheitsservice.de</a></p><p>Oldenburg · Niedersachsen · Hamburg · bundesweit</p></aside><ContactForm/></section></>;}
