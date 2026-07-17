@@ -13,36 +13,54 @@ const fade = {
   },
 };
 
+const ease = [0.22, 1, 0.36, 1] as const;
+
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.media} aria-hidden="true">
-        <img
-          src="/images/hero.jpg"
-          alt=""
-        />
+      <motion.div
+        className={styles.media}
+        aria-hidden="true"
+        variants={fade}
+        initial="hidden"
+        animate="visible"
+        transition={{
+          duration: 2.2,
+          delay: 0.1,
+          ease,
+        }}
+      >
+        <img src="/images/hero.jpg" alt="" />
 
-        <div className={styles.overlay} />
-        <div className={styles.texture} />
+        <div className={styles.imageShade} />
+        <div className={styles.imageGlow} />
+      </motion.div>
+
+      <div className={styles.gridLines} aria-hidden="true">
+        <i />
+        <i />
+        <i />
       </div>
 
       <div className={styles.frame}>
         <motion.div
-          className={styles.location}
+          className={styles.topMeta}
           variants={fade}
           initial="hidden"
           animate="visible"
           transition={{
-            duration: 1.6,
-            delay: 0.2,
-            ease: [0.22, 1, 0.36, 1],
+            duration: 1.5,
+            delay: 0.25,
+            ease,
           }}
         >
-          Oldenburg
-          <span />
-          Niedersachsen
-          <span />
-          Hamburg
+          <span>Sicherheitsdienst</span>
+
+          <i />
+
+          <span>Oldenburg</span>
+          <span>Niedersachsen</span>
+          <span>Hamburg</span>
         </motion.div>
 
         <div className={styles.content}>
@@ -52,12 +70,12 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{
-              duration: 1.6,
-              delay: 0.3,
-              ease: [0.22, 1, 0.36, 1],
+              duration: 1.5,
+              delay: 0.35,
+              ease,
             }}
           >
-            S.W.A.T. Sicherheit & Service GmbH
+            S.W.A.T. Sicherheit &amp; Service GmbH
           </motion.p>
 
           <motion.h1
@@ -65,25 +83,29 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{
-              duration: 1.8,
-              delay: 0.45,
-              ease: [0.22, 1, 0.36, 1],
+              duration: 1.9,
+              delay: 0.48,
+              ease,
             }}
           >
-            Sicherheit
-            <span>ohne</span>
-            <em>Kompromisse.</em>
+            <span className={styles.firstLine}>Sicherheit</span>
+
+            <span className={styles.secondLine}>
+              <small>ohne</small>
+            </span>
+
+            <span className={styles.thirdLine}>Kompromisse.</span>
           </motion.h1>
 
           <motion.div
-            className={styles.bottomContent}
+            className={styles.introduction}
             variants={fade}
             initial="hidden"
             animate="visible"
             transition={{
               duration: 1.6,
               delay: 0.75,
-              ease: [0.22, 1, 0.36, 1],
+              ease,
             }}
           >
             <p>
@@ -93,53 +115,60 @@ export default function Hero() {
 
             <Link href="/kontakt" className={styles.contactLink}>
               <span>Projekt besprechen</span>
-              <b>↗</b>
+              <b aria-hidden="true">↗</b>
             </Link>
           </motion.div>
         </div>
 
         <motion.div
-          className={styles.meta}
+          className={styles.signature}
           variants={fade}
           initial="hidden"
           animate="visible"
           transition={{
             duration: 1.6,
             delay: 0.9,
-            ease: [0.22, 1, 0.36, 1],
+            ease,
           }}
         >
-          <div>
-            <strong>24/7</strong>
-            <span>Erreichbar</span>
+          <span className={styles.signatureIndex}>SW / 19</span>
+
+          <div className={styles.signatureText}>
+            <span>Protection</span>
+            <span>without</span>
+            <strong>compromise</strong>
           </div>
 
-          <div>
-            <strong>§34a</strong>
-            <span>Konform</span>
-          </div>
-
-          <div>
-            <strong>2019</strong>
-            <span>Seit</span>
-          </div>
+          <span className={styles.signatureLocation}>
+            53° 08′ N
+            <br />
+            08° 13′ E
+          </span>
         </motion.div>
 
-        <motion.a
-          href="#story"
-          className={styles.scroll}
+        <motion.div
+          className={styles.bottomRail}
           variants={fade}
           initial="hidden"
           animate="visible"
           transition={{
             duration: 1.6,
-            delay: 1.1,
-            ease: [0.22, 1, 0.36, 1],
+            delay: 1.05,
+            ease,
           }}
         >
-          <span>Scroll</span>
-          <i />
-        </motion.a>
+          <a href="#story" className={styles.scroll}>
+            <span>Scroll</span>
+
+            <span className={styles.scrollLine}>
+              <i />
+            </span>
+          </a>
+
+          <span className={styles.established}>
+            Independent Security Company · Est. 2019
+          </span>
+        </motion.div>
       </div>
     </section>
   );
