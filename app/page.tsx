@@ -1,3 +1,4 @@
+import Story from "@/components/Story/Story";
 import Hero from "@/components/Hero/Hero";
 import Link from "next/link";
 import { Reveal } from "@/components/Motion";
@@ -32,23 +33,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <Story />
+    
 
-      <section className="trustStrip">
-        {trustItems.map((item) => (
-          <span key={item}>
-            ◆ {item}
-          </span>
-        ))}
-      </section>
-
-      <section className="numbers">
-        {numbers.map(([number, label]) => (
-          <div key={label}>
-            <strong>{number}</strong>
-            <span>{label}</span>
-          </div>
-        ))}
-      </section>
 
       <section className="section">
         <Reveal className="sectionIntro">

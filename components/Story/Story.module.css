@@ -1,0 +1,405 @@
+.story {
+  position: relative;
+
+  padding:
+    clamp(120px, 14vw, 240px)
+    clamp(24px, 4.5vw, 80px)
+    clamp(110px, 12vw, 210px);
+
+  overflow: hidden;
+
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 82% 12%,
+      rgba(210, 166, 77, 0.08),
+      transparent 28%
+    ),
+    #070707;
+}
+
+.story::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: clamp(24px, 4.5vw, 80px);
+  left: clamp(24px, 4.5vw, 80px);
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.11);
+}
+
+/* Intro */
+
+.intro {
+  display: grid;
+  grid-template-columns:
+    minmax(110px, 0.28fr)
+    minmax(0, 1.15fr)
+    minmax(280px, 0.55fr);
+
+  align-items: start;
+  gap: clamp(28px, 5vw, 90px);
+}
+
+.index {
+  padding-top: 13px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.intro h2 {
+  max-width: 900px;
+
+  font-family: Oswald, Arial, sans-serif;
+  font-size: clamp(3.6rem, 7.8vw, 8.7rem);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.intro h2 span,
+.intro h2 em {
+  display: block;
+}
+
+.intro h2 span {
+  margin-left: clamp(20px, 5vw, 90px);
+
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.intro h2 em {
+  margin-top: 14px;
+
+  color: #d2a64d;
+  font-style: normal;
+}
+
+.introText {
+  padding-top: clamp(110px, 13vw, 210px);
+}
+
+.introText p {
+  margin: 0 0 24px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.introText p:last-child {
+  margin-bottom: 0;
+}
+
+/* Image statement */
+
+.statement {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.7fr);
+
+  align-items: end;
+  gap: clamp(30px, 7vw, 120px);
+
+  margin-top: clamp(120px, 15vw, 260px);
+}
+
+.statementImage {
+  position: relative;
+
+  min-height: clamp(520px, 65vw, 880px);
+  overflow: hidden;
+}
+
+.statementImage img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+  filter:
+    brightness(0.68)
+    contrast(1.08)
+    saturate(0.7);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(7, 7, 7, 0.72),
+      transparent 45%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(7, 7, 7, 0.34),
+      transparent 55%
+    );
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 26px;
+  left: 28px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.statementCopy {
+  position: relative;
+
+  max-width: 570px;
+  padding-bottom: clamp(40px, 8vw, 120px);
+}
+
+.statementNumber {
+  display: block;
+
+  margin-bottom: 40px;
+
+  color: #d2a64d;
+
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 1.4rem;
+}
+
+.statementCopy p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-family: Oswald, Arial, sans-serif;
+  font-size: clamp(2rem, 3.6vw, 4.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.statementCopy strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Facts */
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+
+  margin-top: clamp(100px, 12vw, 220px);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.fact {
+  position: relative;
+
+  min-height: 410px;
+  padding: 35px clamp(25px, 3vw, 52px) 35px 0;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.fact:not(:first-child) {
+  padding-left: clamp(25px, 3vw, 52px);
+}
+
+.fact:last-child {
+  border-right: 0;
+}
+
+.factIndex {
+  display: block;
+
+  margin-bottom: 70px;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.fact strong {
+  display: block;
+
+  color: #efd18d;
+
+  font-family: Oswald, Arial, sans-serif;
+  font-size: clamp(3.6rem, 6vw, 7.3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.fact h3 {
+  margin-top: 14px;
+
+  color: #ffffff;
+
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.fact p {
+  max-width: 340px;
+  margin: 60px 0 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .intro {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .introText {
+    grid-column: 2;
+    max-width: 540px;
+    padding-top: 45px;
+  }
+
+  .statement {
+    grid-template-columns: 1fr;
+  }
+
+  .statementCopy {
+    max-width: 730px;
+    padding-bottom: 0;
+  }
+
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .fact,
+  .fact:not(:first-child) {
+    min-height: auto;
+    padding: 38px 0 55px;
+
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .fact:last-child {
+    border-bottom: 0;
+  }
+
+  .factIndex {
+    margin-bottom: 35px;
+  }
+
+  .fact p {
+    margin-top: 30px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .story {
+    padding:
+      100px
+      20px
+      90px;
+  }
+
+  .story::before {
+    right: 20px;
+    left: 20px;
+  }
+
+  .intro {
+    display: block;
+  }
+
+  .index {
+    margin-bottom: 35px;
+  }
+
+  .intro h2 {
+    font-size: clamp(3.15rem, 15vw, 5rem);
+    line-height: 0.9;
+  }
+
+  .intro h2 span,
+  .intro h2 em {
+    margin-left: 0;
+  }
+
+  .intro h2 em {
+    margin-top: 10px;
+  }
+
+  .introText {
+    max-width: 100%;
+    padding-top: 55px;
+  }
+
+  .statement {
+    margin-top: 110px;
+  }
+
+  .statementImage {
+    min-height: 520px;
+  }
+
+  .statementImage img {
+    object-position: 58% center;
+  }
+
+  .imageCaption {
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+
+    line-height: 1.5;
+  }
+
+  .statementCopy {
+    padding-top: 15px;
+  }
+
+  .statementNumber {
+    margin-bottom: 25px;
+  }
+
+  .statementCopy p {
+    font-size: clamp(2rem, 10vw, 3.1rem);
+  }
+
+  .facts {
+    margin-top: 100px;
+  }
+
+  .fact strong {
+    font-size: clamp(4rem, 20vw, 6.4rem);
+  }
+}
