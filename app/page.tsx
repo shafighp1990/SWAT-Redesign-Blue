@@ -1,25 +1,11 @@
+import Services from "@/components/Services/Services";
 import Story from "@/components/Story/Story";
 import Hero from "@/components/Hero/Hero";
 import Link from "next/link";
 import { Reveal } from "@/components/Motion";
-import { services } from "@/lib/services";
+
 
 export default function HomePage() {
-  const trustItems = [
-    "24/7 erreichbar",
-    "Geschultes Personal",
-    "§34a-konform",
-    "Kurzfristig einsatzbereit",
-    "Bundesweit möglich",
-  ];
-
-  const numbers = [
-    ["2019", "Seit 2019 aktiv"],
-    ["24/7", "Erreichbar"],
-    ["28+", "Kunden & Einsätze"],
-    ["3", "Regionen"],
-    ["Bundesweit", "Nach Bedarf"],
-  ];
 
   const processSteps = [
     "Anfrage",
@@ -34,49 +20,10 @@ export default function HomePage() {
     <>
       <Hero />
       <Story />
-    
+      <Services />
 
 
-      <section className="section">
-        <Reveal className="sectionIntro">
-          <span className="eyebrow">
-            Leistungsplattform
-          </span>
-
-          <h2>
-            Sicherheit ist ein System – nicht nur Präsenz.
-          </h2>
-
-          <p>
-            Wir verbinden Analyse, Konzept, qualifiziertes Personal,
-            Umsetzung und laufende Betreuung.
-          </p>
-        </Reveal>
-
-        <div className="serviceGrid">
-          {services.map((service, index) => (
-            <Reveal
-              key={service.slug}
-              delay={index * 0.04}
-            >
-              <Link
-                className="serviceCard"
-                href={`/leistungen/${service.slug}`}
-              >
-                <span>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <h3>{service.title}</h3>
-
-                <p>{service.intro}</p>
-
-                <b>Mehr erfahren →</b>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      
 
       <section className="comparison">
         <Reveal className="comparisonCopy">

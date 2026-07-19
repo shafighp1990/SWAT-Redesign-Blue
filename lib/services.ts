@@ -5,6 +5,7 @@ export type Service = {
   intro: string;
   description: string;
   benefits: string[];
+  compactTitle?: boolean;
 };
 
 export const services: Service[] = [
@@ -30,7 +31,9 @@ export const services: Service[] = [
     eyebrow: "Sichere Abläufe für Events",
     intro: "Einlasskontrolle, Besucherlenkung und Deeskalation für einen sicheren Veranstaltungsablauf.",
     description: "Für Firmenevents, Messen, Stadtfeste, Konzerte und private Veranstaltungen stellen wir erfahrenes, situationssicheres Personal.",
+    compactTitle: true,
     benefits: ["Einlass- und Ticketkontrollen", "Besucherlenkung", "Backstage-Schutz", "Deeskalation und Präsenz"]
+  
   },
   {
     slug: "soziale-einrichtungen",
@@ -53,6 +56,7 @@ export const services: Service[] = [
     title: "Baustellen- & Geländesicherung",
     eyebrow: "Schutz für Projekte und Material",
     intro: "Sichtbare Präsenz und flexible Einsatzzeiten zum Schutz vor Diebstahl und Vandalismus.",
+    compactTitle: true,
     description: "Wir sichern Baustellen, Maschinen, Werkzeuge und Materialien durch Kontrollgänge, Zutrittsmanagement und Nachtbewachung.",
     benefits: ["Baustellenbewachung", "Geländekontrollen", "Zutrittsmanagement", "Nacht- und Wochenenddienste"]
   },
@@ -62,6 +66,7 @@ export const services: Service[] = [
     eyebrow: "Individuelle Lösungen statt Standardpakete",
     intro: "Analyse von Objekt, Abläufen, Risiken und Einsatzzeiten.",
     description: "Wir entwickeln nachvollziehbare Sicherheitskonzepte mit klaren Maßnahmen, planbaren Kosten und festem Ansprechpartner.",
+    compactTitle: true,
     benefits: ["Risiko- und Schwachstellenanalyse", "Maßnahmenplanung", "Personal- und Einsatzkonzept", "Transparente Angebotserstellung"]
   }
 ];
@@ -69,3 +74,4 @@ export const services: Service[] = [
 export function getService(slug: string) {
   return services.find((service) => service.slug === slug);
 }
+

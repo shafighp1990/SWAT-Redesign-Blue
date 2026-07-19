@@ -3,21 +3,21 @@
 import { motion } from "framer-motion";
 import styles from "./Story.module.css";
 
-const facts = [
+const principles = [
   {
-    value: "2019",
-    label: "Seit",
-    text: "Erfahrung, gewachsene Abläufe und persönliche Verantwortung.",
+    title: "Verantwortung",
+    statement: "Jeder Einsatz beginnt mit Verantwortung.",
+    text: "Wir übernehmen Verantwortung für Menschen, Objekte und klar definierte Abläufe.",
   },
   {
-    value: "24/7",
-    label: "Erreichbar",
-    text: "Direkte Kommunikation, kurze Wege und schnelle Reaktion.",
+    title: "Präsenz",
+    statement: "Sichtbar. Kontrolliert. Professionell.",
+    text: "Unsere Präsenz schafft Orientierung, reduziert Risiken und vermittelt Sicherheit.",
   },
   {
-    value: "§34a",
-    label: "Konform",
-    text: "Qualifiziertes Personal und klar definierte Einsatzstandards.",
+    title: "Vertrauen",
+    statement: "Sicherheit entsteht durch Verlässlichkeit.",
+    text: "Klare Kommunikation, feste Ansprechpartner und konsequente Standards schaffen Vertrauen.",
   },
 ];
 
@@ -119,31 +119,45 @@ export default function Story() {
         </motion.div>
       </div>
 
-      <div className={styles.facts}>
-        {facts.map((fact, index) => (
-          <motion.article
-            key={fact.value}
-            className={styles.fact}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{
-              ...fadeTransition,
-              delay: index * 0.12,
-            }}
-          >
-            <span className={styles.factIndex}>
-              {String(index + 1).padStart(2, "0")}
-            </span>
+    <div className={styles.principles}>
+  {principles.map((principle, index) => (
+    <motion.article
+      key={principle.title}
+      className={styles.principle}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        ...fadeTransition,
+        delay: index * 0.12,
+      }}
+    >
+      <span className={styles.principleIndex}>
+        {String(index + 1).padStart(2, "0")}
+      </span>
 
-            <strong>{fact.value}</strong>
+      <div className={styles.principleLine} />
 
-            <h3>{fact.label}</h3>
+     <h3
+  className={
+    index === 0
+      ? styles.compactTitle
+      : ""
+  }
+>
+  {principle.title}
+</h3>
 
-            <p>{fact.text}</p>
-          </motion.article>
-        ))}
-      </div>
+      <strong>{principle.statement}</strong>
+
+      <p>{principle.text}</p>
+
+      <span className={styles.principleMark} aria-hidden="true">
+        SW / {String(index + 1).padStart(2, "0")}
+      </span>
+    </motion.article>
+  ))}
+</div>
     </section>
   );
 }
