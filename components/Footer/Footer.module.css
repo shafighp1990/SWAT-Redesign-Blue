@@ -1,0 +1,33 @@
+.footer { position: relative; overflow: hidden; color: #fff; background: radial-gradient(circle at 82% 8%, rgba(210,166,77,.09), transparent 27%), #050505; }
+.footer::before { content: "SWAT"; position: absolute; right: -.04em; bottom: -.2em; color: rgba(255,255,255,.018); font-family: Oswald,Arial,sans-serif; font-size: clamp(13rem,32vw,38rem); font-weight: 600; line-height: .75; letter-spacing: -.075em; pointer-events: none; }
+.frame { position: relative; z-index: 1; padding: 0 clamp(24px,4.5vw,80px) 28px; }
+.topLine,.bottomLine { display:flex; align-items:center; justify-content:space-between; gap:30px; color:rgba(255,255,255,.38); font-size:.52rem; font-weight:700; line-height:1.6; letter-spacing:.16em; text-transform:uppercase; }
+.topLine { padding:24px 0; border-top:1px solid rgba(255,255,255,.13); border-bottom:1px solid rgba(255,255,255,.1); }
+.statement { display:grid; grid-template-columns:minmax(110px,.24fr) minmax(0,1fr) auto; align-items:end; gap:clamp(30px,5vw,90px); padding:clamp(100px,12vw,190px) 0 clamp(95px,11vw,170px); }
+.index,.columnLabel { color:rgba(255,255,255,.38); font-size:.56rem; font-weight:700; letter-spacing:.19em; text-transform:uppercase; }
+.statementCopy p { margin:0 0 26px; color:#d2a64d; font-size:.62rem; font-weight:800; letter-spacing:.2em; text-transform:uppercase; }
+.statementCopy h2 { max-width:1050px; color:#fff; font-size:clamp(3.6rem,7.2vw,8.4rem); font-weight:500; line-height:.88; letter-spacing:-.042em; text-transform:uppercase; text-wrap:balance; }
+.statementCopy h2 span { display:block; margin-left:clamp(24px,5vw,95px); color:rgba(255,255,255,.48); }
+.contactLink { display:inline-flex; align-items:center; justify-content:space-between; gap:28px; min-width:210px; padding:17px 0; color:#fff; border-top:1px solid rgba(210,166,77,.72); border-bottom:1px solid rgba(255,255,255,.12); font-size:.61rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; transition:color .35s ease,border-color .35s ease; }
+.contactLink b { color:#d2a64d; font-size:1rem; font-weight:400; transition:transform .35s ease; }
+.contactLink:hover { color:#efd18d; border-bottom-color:rgba(210,166,77,.52); }
+.contactLink:hover b { transform:translate(3px,-3px); }
+.information { display:grid; grid-template-columns:1.45fr .7fr 1.05fr .55fr; gap:clamp(35px,5vw,90px); padding:44px 0 70px; border-top:1px solid rgba(255,255,255,.12); }
+.brand { display:flex; align-items:flex-start; gap:22px; width:max-content; max-width:100%; }
+.brand img { width:92px; height:74px; object-fit:contain; }
+.brand span { display:flex; flex-direction:column; gap:5px; max-width:220px; padding-top:8px; color:rgba(255,255,255,.38); font-size:.62rem; line-height:1.6; letter-spacing:.07em; text-transform:uppercase; }
+.brand strong { color:#fff; font-family:Oswald,Arial,sans-serif; font-size:1.05rem; font-weight:500; letter-spacing:.14em; }
+.navigation,.contact,.legal { display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
+.columnLabel { margin-bottom:13px; color:#d2a64d; }
+.navigation a,.contact a,.legal a,.contact address { color:rgba(255,255,255,.58); font-size:.75rem; font-style:normal; line-height:1.65; transition:color .3s ease; }
+.navigation a:hover,.contact a:hover,.legal a:hover { color:#fff; }
+.bottomLine { padding-top:24px; border-top:1px solid rgba(255,255,255,.1); }
+.bottomLine a { display:inline-flex; align-items:center; gap:12px; color:rgba(255,255,255,.56); transition:color .3s ease; }
+.bottomLine a:hover { color:#efd18d; }
+.bottomLine i { color:#d2a64d; font-size:.9rem; font-style:normal; }
+@media (min-width:651px) { .bottomLine{padding-right:78px} }
+@media (max-width:1000px) { .statement{grid-template-columns:90px 1fr}.contactLink{grid-column:2;margin-top:20px}.information{grid-template-columns:1.2fr .8fr 1fr}.legal{grid-column:2} }
+@media (max-width:650px) {
+  .frame{padding-right:20px;padding-left:20px}.topLine{align-items:flex-start;flex-direction:column;gap:8px}.statement{display:block;padding:86px 0 90px}.index{display:block;margin-bottom:38px}.statementCopy h2{font-size:clamp(3rem,14vw,4.8rem);line-height:.91}.statementCopy h2 span{margin-left:0}.contactLink{width:100%;margin-top:48px}.information{grid-template-columns:1fr 1fr;gap:45px 28px;padding-bottom:55px}.brand{grid-column:1/-1}.contact{grid-column:1/-1}.legal{grid-column:auto}.bottomLine{align-items:flex-start;flex-direction:column;gap:12px}
+}
+@media (prefers-reduced-motion:reduce) { .contactLink,.contactLink b,.navigation a,.contact a,.legal a,.bottomLine a{transition:none} }

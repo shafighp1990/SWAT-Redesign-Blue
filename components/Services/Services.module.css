@@ -168,12 +168,9 @@
   width: 44px;
   height: 44px;
 
-  color: #111111;
-
-  background:rgba(181,139,57,.12);
-  color:#b58b39;
-
-  border:1px solid rgba(181,139,57,.35);
+  color: #b58b39;
+  background: rgba(181, 139, 57, 0.12);
+  border: 1px solid rgba(181, 139, 57, 0.35);
   border-radius: 50%;
 
   font-size: 1rem;
@@ -241,7 +238,7 @@
 }
 .serviceContent p {
   max-width: 470px;
-  margin: clamp(28px,4vw,42px) 0 0;
+  margin: clamp(28px, 4vw, 42px) 0 0;
 
   color: rgba(17, 17, 17, 0.57);
 
@@ -357,7 +354,7 @@
 @media (hover: hover) {
   .serviceLink:hover .serviceContent h3 {
     color: #b58b39;
-    transform: translateX(8px);
+    transform: translateX(6px);
   }
 
   .serviceLink:hover .imageWrap img {
@@ -370,9 +367,8 @@
   }
 
   .serviceLink:hover .serviceArrow {
-    color: #ffffff;
-
-    background: #111111;
+    color: #111111;
+    background: #b58b39;
     border-color: #b58b39;
 
     transform: rotate(45deg) scale(1.08);
@@ -547,9 +543,9 @@
   }
 
   .serviceContent h3 {
-  font-size: clamp(2.7rem, 12.5vw, 4.4rem);
-  line-height: 0.94;
-}
+    font-size: clamp(2.7rem, 12.5vw, 4.4rem);
+    line-height: 0.94;
+  }
 
   .serviceContent p {
     margin-top: 30px;
@@ -612,4 +608,12 @@
 .compactTitle {
   font-size: clamp(1.9rem, 3.2vw, 3.9rem) !important;
   max-width: 640px;
+}
+
+@media (max-width: 650px) {
+  .compactTitle {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2rem, 8.75vw, 3.2rem) !important;
+  }
 }

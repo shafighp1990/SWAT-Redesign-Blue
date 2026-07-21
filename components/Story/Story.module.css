@@ -345,21 +345,23 @@
   letter-spacing: 0.18em;
 }
 
-.principle:hover {
-  background: rgba(255, 255, 255, 0.018);
-}
+@media (hover: hover) {
+  .principle:hover {
+    background: rgba(255, 255, 255, 0.018);
+  }
 
-.principle:hover::before {
-  opacity: 1;
-}
+  .principle:hover::before {
+    opacity: 1;
+  }
 
-.principle:hover .principleLine {
-  width: 100%;
-}
+  .principle:hover .principleLine {
+    width: 100%;
+  }
 
-.principle:hover h3 {
-  color: #efd18d;
-  transform: translateY(-6px);
+  .principle:hover h3 {
+    color: #efd18d;
+    transform: translateY(-4px);
+  }
 }
 /* Tablet */
 
@@ -533,6 +535,12 @@
 }
 }
 
-.compactTitle{
-    font-size:clamp(2.4rem,3.6vw,4.4rem)!important;
+.compactTitle {
+  font-size: clamp(2.4rem, 3.6vw, 4.4rem) !important;
+}
+
+@media (max-width: 650px) {
+  .compactTitle {
+    font-size: clamp(2.45rem, 12vw, 4rem) !important;
+  }
 }

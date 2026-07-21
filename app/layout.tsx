@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header/Header";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://swat-sicherheitsservice.de"),
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <body>
+      <body id="top">
         <Header />
         <main>{children}</main>
         <Footer />
