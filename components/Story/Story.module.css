@@ -12,10 +12,10 @@
   background:
     radial-gradient(
       circle at 82% 12%,
-      rgba(210, 166, 77, 0.08),
+      rgba(37, 99, 235, 0.1),
       transparent 28%
     ),
-    #070707;
+    #05080f;
 }
 
 .story::before {
@@ -80,7 +80,7 @@
 .intro h2 em {
   margin-top: 14px;
 
-  color: #d2a64d;
+  color: #60a5fa;
   font-style: normal;
 }
 
@@ -176,9 +176,9 @@
 
   margin-bottom: 40px;
 
-  color: #d2a64d;
+  color: #60a5fa;
 
-  font-family: Oswald, Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.4rem;
 }
 
@@ -248,7 +248,7 @@
   background:
     linear-gradient(
       180deg,
-      rgba(210, 166, 77, 0.07),
+      rgba(37, 99, 235, 0.08),
       transparent 42%
     );
 
@@ -274,11 +274,11 @@
   z-index: 1;
 
   width: 42px;
-  height: 1px;
+  height: 2px;
 
   margin-top: 32px;
 
-  background: #d2a64d;
+  background: #2563eb;
 
   transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -338,16 +338,16 @@
   right: clamp(28px, 3.2vw, 58px);
   bottom: 32px;
 
-  color: rgba(210, 166, 77, 0.4);
+  color: rgba(37, 99, 235, 0.5);
 
-  font-size: 0.48rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
 }
 
 @media (hover: hover) {
   .principle:hover {
-    background: rgba(255, 255, 255, 0.018);
+    background: rgba(255, 255, 255, 0.02);
   }
 
   .principle:hover::before {
@@ -359,7 +359,7 @@
   }
 
   .principle:hover h3 {
-    color: #efd18d;
+    color: #60a5fa;
     transform: translateY(-4px);
   }
 }

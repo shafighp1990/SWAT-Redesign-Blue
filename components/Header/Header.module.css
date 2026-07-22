@@ -1,5 +1,5 @@
 .header {
-  --header-height: 92px;
+  --header-height: 80px;
 
   position: fixed;
   z-index: 200;
@@ -9,25 +9,25 @@
 
   height: var(--header-height);
 
-  background: rgba(5, 5, 5, 0.36);
-  border-bottom: 1px solid rgba(210, 166, 77, 0.13);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background: rgba(5, 8, 15, 0.85);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   transition:
-    height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 0.5s ease,
-    border-color 0.5s ease,
-    backdrop-filter 0.5s ease;
+    height 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    backdrop-filter 0.4s ease;
 }
 
 .header.scrolled {
   --header-height: 70px;
 
-  background: rgba(5, 5, 5, 0.9);
-  border-bottom-color: rgba(210, 166, 77, 0.26);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(5, 8, 15, 0.95);
+  border-bottom-color: rgba(37, 99, 235, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .inner {
@@ -117,15 +117,15 @@
   bottom: -9px;
   left: 0;
 
-  height: 1px;
+  height: 2px;
 
-  background: var(--gold, #d2a64d);
+  background: var(--blue, #2563eb);
 
   transform: scaleX(0);
   transform-origin: right center;
 
   transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .navLink:hover {
@@ -161,28 +161,29 @@
 
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 10px;
 
-  min-height: 46px;
-  margin-left: clamp(22px, 3vw, 45px);
-  padding: 0 15px 0 12px;
+  min-height: 44px;
+  margin-left: clamp(20px, 2.5vw, 40px);
+  padding: 0 18px;
 
   overflow: hidden;
 
   color: #ffffff;
 
-  border: 1px solid rgba(210, 166, 77, 0.56);
-  background: rgba(7, 7, 7, 0.35);
+  background: var(--blue, #2563eb);
+  border: none;
+  border-radius: 6px;
 
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.095em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 
   transition:
-    color 0.35s ease,
-    border-color 0.35s ease,
-    background-color 0.35s ease;
+    color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .contactButton::before {
@@ -192,12 +193,12 @@
   z-index: -1;
   inset: 0;
 
-  background: var(--gold, #d2a64d);
+  background: var(--blue-dark, #1d4ed8);
 
   transform: translateX(-102%);
 
   transition:
-    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .contactButton:hover::before,
@@ -207,22 +208,23 @@
 
 .contactButton:hover,
 .contactActive {
-  color: #080808;
-  border-color: var(--gold, #d2a64d);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
 }
 
 .contactArrow {
-  color: var(--gold2, #efd18d);
-  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
 
   transition:
-    color 0.35s ease,
-    transform 0.35s ease;
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .contactButton:hover .contactArrow,
 .contactActive .contactArrow {
-  color: #080808;
+  color: #ffffff;
   transform: translate(2px, -2px);
 }
 
@@ -281,7 +283,7 @@
   width: 3px;
   height: 3px;
 
-  background: var(--gold, #d2a64d);
+  background: var(--blue-light, #60a5fa);
   border-radius: 50%;
 
   transform: translate(-50%, -50%);
@@ -289,7 +291,7 @@
 
 .contactButton:hover .shield b,
 .contactActive .shield b {
-  background: #080808;
+  background: #ffffff;
 }
 
 /* Mobile Button */
@@ -413,18 +415,18 @@
     opacity: 0;
 
     background:
-      radial-gradient(
-        circle at 80% 15%,
-        rgba(210, 166, 77, 0.12),
-        transparent 32%
+      linear-gradient(
+        135deg,
+        rgba(37, 99, 235, 0.08) 0%,
+        transparent 50%
       ),
-      #070707;
+      #05080f;
 
     pointer-events: none;
 
     transition:
-      opacity 0.65s ease,
-      visibility 0.65s ease;
+      opacity 0.5s ease,
+      visibility 0.5s ease;
   }
 
   .navigationOpen {
@@ -500,12 +502,12 @@
   .mobileNumber {
     display: block;
 
-    color: var(--gold, #d2a64d);
+    color: var(--blue-light, #60a5fa);
 
-    font-family: Inter, Arial, sans-serif;
-    font-size: 0.55rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-family: Inter, sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
   }
 
   .mobileContact {
@@ -515,20 +517,20 @@
 
     padding-top: 22px;
 
-    color: rgba(255, 255, 255, 0.48);
+    color: rgba(255, 255, 255, 0.5);
 
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
 
   .mobileContact span {
     margin-bottom: 5px;
 
-    color: var(--gold2, #efd18d);
+    color: var(--blue-light, #60a5fa);
 
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 }

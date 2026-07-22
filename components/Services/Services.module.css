@@ -8,14 +8,14 @@
 
   overflow: hidden;
 
-  color: #111111;
+  color: #ffffff;
   background:
     radial-gradient(
       circle at 88% 6%,
-      rgba(210, 166, 77, 0.1),
+      rgba(37, 99, 235, 0.08),
       transparent 26%
     ),
-    #f2f0eb;
+    #0a0f18;
 }
 
 .services::before {
@@ -28,7 +28,7 @@
 
   height: 1px;
 
-  background: rgba(17, 17, 17, 0.16);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* Header */
@@ -47,23 +47,23 @@
 .eyebrow {
   padding-top: 14px;
 
-  color: rgba(17, 17, 17, 0.48);
+  color: rgba(255, 255, 255, 0.5);
 
-  font-size: 0.58rem;
-  font-weight: 800;
+  font-size: 0.6rem;
+  font-weight: 600;
   line-height: 1.6;
-  letter-spacing: 0.19em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .headerCopy h2 {
   margin: 0;
 
-  color: #111111;
+  color: #ffffff;
 
-  font-family: Oswald, Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(4rem, 7.8vw, 9rem);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 0.85;
   letter-spacing: -0.045em;
   text-transform: uppercase;
@@ -74,7 +74,7 @@
 
   margin-left: clamp(30px, 7vw, 125px);
 
-  color: #b58b39;
+  color: #60a5fa;
 }
 
 .headerCopy p {
@@ -85,7 +85,7 @@
     0
     clamp(30px, 7vw, 125px);
 
-  color: rgba(17, 17, 17, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 
   font-size: 0.9rem;
   line-height: 1.85;
@@ -104,13 +104,13 @@
 
   padding-bottom: 15px;
 
-  color: rgba(17, 17, 17, 0.53);
+  color: rgba(255, 255, 255, 0.5);
 
-  border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-  font-size: 0.57rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -119,13 +119,13 @@
 .showcase {
   margin-top: clamp(110px, 14vw, 240px);
 
-  border-top: 1px solid rgba(17, 17, 17, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .service {
   position: relative;
 
-  border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .serviceLink {
@@ -153,11 +153,11 @@
 
 .serviceIndex,
 .serviceCategory {
-  color: rgba(17, 17, 17, 0.44);
+  color: rgba(255, 255, 255, 0.4);
 
   font-size: 0.55rem;           
-  font-weight: 800;
-  letter-spacing: 0.18em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -168,9 +168,9 @@
   width: 44px;
   height: 44px;
 
-  color: #b58b39;
-  background: rgba(181, 139, 57, 0.12);
-  border: 1px solid rgba(181, 139, 57, 0.35);
+  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.3);
   border-radius: 50%;
 
   font-size: 1rem;
@@ -218,11 +218,11 @@
   max-width: 620px;
   margin: 0;
 
-  color: #111111;
+  color: #ffffff;
 
-  font-family: Oswald, Arial, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2.35rem, 4vw, 4.9rem);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 0.92;
   letter-spacing: -0.035em;
 
@@ -240,10 +240,10 @@
   max-width: 470px;
   margin: clamp(28px, 4vw, 42px) 0 0;
 
-  color: rgba(17, 17, 17, 0.57);
+  color: rgba(255, 255, 255, 0.6);
 
-  font-size: 0.86rem;
-  line-height: 1.85;
+  font-size: 0.9rem;
+  line-height: 1.8;
 }
 
 .detailsLink {
@@ -254,13 +254,13 @@
   margin-top: 35px;
   padding-bottom: 10px;
 
-  color: #111111;
+  color: #ffffff;
 
-  border-bottom: 1px solid rgba(181, 139, 57, 0.68);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.7);
 
-  font-size: 0.59rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -268,9 +268,9 @@
   display: block;
 
   width: 34px;
-  height: 1px;
+  height: 2px;
 
-  background: #b58b39;
+  background: #60a5fa;
 
   transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -353,7 +353,7 @@
 
 @media (hover: hover) {
   .serviceLink:hover .serviceContent h3 {
-    color: #b58b39;
+    color: #60a5fa;
     transform: translateX(6px);
   }
 
@@ -367,9 +367,9 @@
   }
 
   .serviceLink:hover .serviceArrow {
-    color: #111111;
-    background: #b58b39;
-    border-color: #b58b39;
+    color: #ffffff;
+    background: #2563eb;
+    border-color: #2563eb;
 
     transform: rotate(45deg) scale(1.08);
   }
@@ -392,11 +392,11 @@
 }
 
 .footerLine > span {
-  color: rgba(17, 17, 17, 0.44);
+  color: rgba(255, 255, 255, 0.4);
 
-  font-size: 0.54rem;
-  font-weight: 800;
-  letter-spacing: 0.17em;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -405,16 +405,16 @@
   align-items: center;
   gap: 20px;
 
-  color: #111111;
+  color: #ffffff;
 
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .footerLine b {
-  color: #b58b39;
+  color: #60a5fa;
 
   font-size: 1rem;
   font-weight: 400;

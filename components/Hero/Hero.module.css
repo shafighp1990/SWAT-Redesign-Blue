@@ -64,13 +64,13 @@
   background:
     radial-gradient(
       circle at 72% 32%,
-      rgba(210, 166, 77, 0.12),
+      rgba(37, 99, 235, 0.15),
       transparent 31%
     ),
     linear-gradient(
       90deg,
       transparent 72%,
-      rgba(210, 166, 77, 0.05)
+      rgba(37, 99, 235, 0.06)
     );
 
   pointer-events: none;
@@ -131,7 +131,7 @@
 }
 
 .topMeta > span:first-child {
-  color: #efd18d;
+  color: var(--blue-light, #60a5fa);
 }
 
 .topMeta i {
@@ -142,8 +142,8 @@
 
   background: linear-gradient(
     90deg,
-    rgba(210, 166, 77, 0.9),
-    rgba(210, 166, 77, 0.1)
+    rgba(37, 99, 235, 0.9),
+    rgba(37, 99, 235, 0.1)
   );
 }
 
@@ -161,11 +161,11 @@
 .kicker {
   margin: 0 0 26px;
 
-  color: #efd18d;
+  color: var(--blue-light, #60a5fa);
 
   font-size: 0.63rem;
-  font-weight: 800;
-  letter-spacing: 0.23em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
@@ -214,7 +214,7 @@
   width: max-content;
   margin-left: clamp(18px, 2.6vw, 50px);
 
-  color: #d2a64d;
+  color: var(--blue-light, #60a5fa);
 }
 
 /* Description and CTA */
@@ -252,11 +252,11 @@
 
   color: #ffffff;
 
-  border-bottom: 1px solid rgba(210, 166, 77, 0.68);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.7);
 
-  font-size: 0.67rem;
-  font-weight: 800;
-  letter-spacing: 0.11em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 
   transition:
@@ -265,7 +265,7 @@
 }
 
 .contactLink b {
-  color: #d2a64d;
+  color: var(--blue-light, #60a5fa);
 
   font-size: 1rem;
   font-weight: 400;
@@ -274,8 +274,8 @@
 }
 
 .contactLink:hover {
-  color: #efd18d;
-  border-color: #efd18d;
+  color: var(--blue-light, #60a5fa);
+  border-color: var(--blue-light, #60a5fa);
 }
 
 .contactLink:hover b {
@@ -296,16 +296,16 @@
   min-width: 230px;
   padding: 21px 0 0 24px;
 
-  border-top: 1px solid rgba(210, 166, 77, 0.48);
-  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 1px solid rgba(37, 99, 235, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .signatureIndex {
-  color: #d2a64d;
+  color: var(--blue-light, #60a5fa);
 
   font-size: 0.52rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
 }
 
 .signatureText {
@@ -391,7 +391,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    #d2a64d,
+    var(--blue, #2563eb),
     transparent
   );
 
