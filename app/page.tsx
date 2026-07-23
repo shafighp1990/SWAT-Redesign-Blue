@@ -16,14 +16,19 @@ export default function HomePage() {
     "Betreuung",
   ];
 
+  const benefits = [
+    "Sichtbare Präsenz und Abschreckung",
+    "Kontrollierter Zutritt",
+    "Geschultes Personal auf Abruf",
+    "Professionelle Deeskalation",
+    "Fester Ansprechpartner",
+  ];
+
   return (
     <>
       <Hero />
       <Story />
       <Services />
-
-
-      
 
       <section className="comparison">
         <Reveal className="comparisonCopy">
@@ -41,27 +46,18 @@ export default function HomePage() {
           </p>
         </Reveal>
 
-        <Reveal className="comparisonImage">
-          <img
-            src="/images/security.jpg"
-            alt="Professionelle Sicherheitspräsenz"
-          />
-        </Reveal>
-
         <Reveal className="benefitPanel">
           <h3>Mit S.W.A.T.</h3>
 
           <ul>
-            <li>Sichtbare Präsenz und Abschreckung</li>
-            <li>Kontrollierter Zutritt</li>
-            <li>Geschultes Personal auf Abruf</li>
-            <li>Professionelle Deeskalation</li>
-            <li>Fester Ansprechpartner</li>
+            {benefits.map((benefit) => (
+              <li key={benefit}>{benefit}</li>
+            ))}
           </ul>
         </Reveal>
       </section>
 
-      <section className="darkSection">
+      <section className="section">
         <Reveal className="sectionIntro">
           <span className="eyebrow">
             Ablauf

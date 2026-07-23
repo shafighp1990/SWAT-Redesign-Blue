@@ -1,33 +1,221 @@
-.footer { position: relative; overflow: hidden; color: #fff; background: radial-gradient(circle at 82% 8%, rgba(37,99,235,.09), transparent 27%), #05080f; }
-.footer::before { content: "SWAT"; position: absolute; right: -.04em; bottom: -.2em; color: rgba(255,255,255,.018); font-family: 'Space Grotesk',sans-serif; font-size: clamp(13rem,32vw,38rem); font-weight: 600; line-height: .75; letter-spacing: -.075em; pointer-events: none; }
-.frame { position: relative; z-index: 1; padding: 0 clamp(24px,4.5vw,80px) 28px; }
-.topLine,.bottomLine { display:flex; align-items:center; justify-content:space-between; gap:30px; color:rgba(255,255,255,.4); font-size:.6rem; font-weight:500; line-height:1.6; letter-spacing:.08em; text-transform:uppercase; }
-.topLine { padding:24px 0; border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.06); }
-.statement { display:grid; grid-template-columns:minmax(110px,.24fr) minmax(0,1fr) auto; align-items:end; gap:clamp(30px,5vw,90px); padding:clamp(100px,12vw,190px) 0 clamp(95px,11vw,170px); }
-.index,.columnLabel { color:rgba(255,255,255,.4); font-size:.6rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; }
-.statementCopy p { margin:0 0 26px; color:#60a5fa; font-size:.65rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
-.statementCopy h2 { max-width:1050px; color:#fff; font-size:clamp(3.6rem,7.2vw,8.4rem); font-weight:600; line-height:.88; letter-spacing:-.042em; text-transform:uppercase; text-wrap:balance; }
-.statementCopy h2 span { display:block; margin-left:clamp(24px,5vw,95px); color:rgba(255,255,255,.5); }
-.contactLink { display:inline-flex; align-items:center; justify-content:space-between; gap:28px; min-width:210px; padding:17px 0; color:#fff; border-top:1px solid rgba(37,99,235,.7); border-bottom:1px solid rgba(255,255,255,.1); font-size:.65rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; transition:color .35s ease,border-color .35s ease; }
-.contactLink b { color:#60a5fa; font-size:1rem; font-weight:400; transition:transform .35s ease; }
-.contactLink:hover { color:#60a5fa; border-bottom-color:rgba(37,99,235,.5); }
-.contactLink:hover b { transform:translate(3px,-3px); }
-.information { display:grid; grid-template-columns:1.45fr .7fr 1.05fr .55fr; gap:clamp(35px,5vw,90px); padding:44px 0 70px; border-top:1px solid rgba(255,255,255,.08); }
-.brand { display:flex; align-items:flex-start; gap:22px; width:max-content; max-width:100%; }
-.brand img { width:92px; height:74px; object-fit:contain; }
-.brand span { display:flex; flex-direction:column; gap:5px; max-width:220px; padding-top:8px; color:rgba(255,255,255,.4); font-size:.7rem; line-height:1.6; letter-spacing:.04em; text-transform:uppercase; }
-.brand strong { color:#fff; font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:600; letter-spacing:.02em; }
-.navigation,.contact,.legal { display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
-.columnLabel { margin-bottom:13px; color:#60a5fa; }
-.navigation a,.contact a,.legal a,.contact address { color:rgba(255,255,255,.6); font-size:.8rem; font-style:normal; line-height:1.65; transition:color .3s ease; }
-.navigation a:hover,.contact a:hover,.legal a:hover { color:#60a5fa; }
-.bottomLine { padding-top:24px; border-top:1px solid rgba(255,255,255,.06); }
-.bottomLine a { display:inline-flex; align-items:center; gap:12px; color:rgba(255,255,255,.5); transition:color .3s ease; }
-.bottomLine a:hover { color:#60a5fa; }
-.bottomLine i { color:#60a5fa; font-size:.9rem; font-style:normal; }
-@media (min-width:651px) { .bottomLine{padding-right:78px} }
-@media (max-width:1000px) { .statement{grid-template-columns:90px 1fr}.contactLink{grid-column:2;margin-top:20px}.information{grid-template-columns:1.2fr .8fr 1fr}.legal{grid-column:2} }
-@media (max-width:650px) {
-  .frame{padding-right:20px;padding-left:20px}.topLine{align-items:flex-start;flex-direction:column;gap:8px}.statement{display:block;padding:86px 0 90px}.index{display:block;margin-bottom:38px}.statementCopy h2{font-size:clamp(3rem,14vw,4.8rem);line-height:.91}.statementCopy h2 span{margin-left:0}.contactLink{width:100%;margin-top:48px}.information{grid-template-columns:1fr 1fr;gap:45px 28px;padding-bottom:55px}.brand{grid-column:1/-1}.contact{grid-column:1/-1}.legal{grid-column:auto}.bottomLine{align-items:flex-start;flex-direction:column;gap:12px}
+.footer {
+  position: relative;
+  overflow: hidden;
+  color: #1A2B3C;
+  background: #F5F7F9;
+  border-top: 1px solid #E5E9EF;
 }
-@media (prefers-reduced-motion:reduce) { .contactLink,.contactLink b,.navigation a,.contact a,.legal a,.bottomLine a{transition:none} }
+
+.frame {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(24px, 4.5vw, 80px) 28px;
+}
+
+/* CTA Banner */
+.statement {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(30px, 5vw, 60px);
+  padding: clamp(60px, 8vw, 100px) 0;
+  border-bottom: 1px solid #E5E9EF;
+}
+
+.statementCopy h2 {
+  max-width: 800px;
+  color: #1A2B3C;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  color: #ffffff;
+  background: #135FA7;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.contactLink:hover {
+  background: #0F4A87;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(19, 95, 167, 0.25);
+}
+
+.contactLink b {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Information Grid */
+.information {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1fr 0.7fr;
+  gap: clamp(35px, 5vw, 70px);
+  padding: 50px 0 60px;
+  border-bottom: 1px solid #E5E9EF;
+}
+
+.brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.brand img {
+  width: 72px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.brand span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #6B7280;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.brand strong {
+  color: #135FA7;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navigation,
+.contact,
+.legal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.columnLabel {
+  margin-bottom: 8px;
+  color: #135FA7;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.navigation a,
+.contact a,
+.legal a,
+.contact address {
+  color: #4A5568;
+  font-size: 0.9rem;
+  font-style: normal;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.navigation a:hover,
+.contact a:hover,
+.legal a:hover {
+  color: #135FA7;
+}
+
+/* Bottom Line */
+.bottomLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 0;
+  color: #6B7280;
+  font-size: 0.8rem;
+}
+
+.bottomLine a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4A5568;
+  transition: color 0.2s ease;
+}
+
+.bottomLine a:hover {
+  color: #135FA7;
+}
+
+.bottomLine i {
+  color: #135FA7;
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .statement {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contactLink {
+    justify-self: start;
+  }
+
+  .information {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .frame {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .statement {
+    padding: 50px 0;
+  }
+
+  .statementCopy h2 {
+    font-size: 1.5rem;
+  }
+
+  .contactLink {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .information {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 0 50px;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+
+  .bottomLine {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contactLink,
+  .navigation a,
+  .contact a,
+  .legal a,
+  .bottomLine a {
+    transition: none;
+  }
+}

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <body id="top">
+      <body id="top" style={{ backgroundColor: "#ffffff" }}>
         <Header />
         <main>{children}</main>
         <Footer />

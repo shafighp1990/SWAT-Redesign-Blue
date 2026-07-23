@@ -9,8 +9,8 @@
 
   height: var(--header-height);
 
-  background: rgba(5, 8, 15, 0.85);
-  border-bottom: 1px solid rgba(37, 99, 235, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #E5E9EF;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
@@ -18,16 +18,15 @@
     height 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     background-color 0.4s ease,
     border-color 0.4s ease,
-    backdrop-filter 0.4s ease;
+    box-shadow 0.4s ease;
 }
 
 .header.scrolled {
   --header-height: 70px;
 
-  background: rgba(5, 8, 15, 0.95);
-  border-bottom-color: rgba(37, 99, 235, 0.25);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom-color: #E5E9EF;
+  box-shadow: 0 2px 20px rgba(19, 95, 167, 0.08);
 }
 
 .inner {
@@ -66,7 +65,7 @@
 }
 
 .logoLink:hover .logo {
-  opacity: 0.78;
+  opacity: 0.8;
 }
 
 .scrolled .logo {
@@ -95,12 +94,11 @@
 
   padding: 13px 0;
 
-  color: rgba(255, 255, 255, 0.78);
+  color: #4A5568;
 
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 
   transition: color 0.3s ease;
 }
@@ -119,7 +117,7 @@
 
   height: 2px;
 
-  background: var(--blue, #2563eb);
+  background: #135FA7;
 
   transform: scaleX(0);
   transform-origin: right center;
@@ -129,7 +127,7 @@
 }
 
 .navLink:hover {
-  color: #ffffff;
+  color: #135FA7;
 }
 
 .navLink:hover .navLabel::after {
@@ -138,7 +136,7 @@
 }
 
 .navLink.active {
-  color: #ffffff;
+  color: #135FA7;
 }
 
 .navLink.active .navLabel::after {
@@ -171,11 +169,11 @@
 
   color: #ffffff;
 
-  background: var(--blue, #2563eb);
+  background: #135FA7;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
 
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 
@@ -186,31 +184,10 @@
     transform 0.3s ease;
 }
 
-.contactButton::before {
-  content: "";
-
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-
-  background: var(--blue-dark, #1d4ed8);
-
-  transform: translateX(-102%);
-
-  transition:
-    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.contactButton:hover::before,
-.contactActive::before {
-  transform: translateX(0);
-}
-
-.contactButton:hover,
-.contactActive {
+.contactButton:hover {
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 8px 25px rgba(19, 95, 167, 0.25);
 }
 
 .contactArrow {
@@ -222,8 +199,7 @@
     transform 0.3s ease;
 }
 
-.contactButton:hover .contactArrow,
-.contactActive .contactArrow {
+.contactButton:hover .contactArrow {
   color: #ffffff;
   transform: translate(2px, -2px);
 }
@@ -283,15 +259,10 @@
   width: 3px;
   height: 3px;
 
-  background: var(--blue-light, #60a5fa);
+  background: #ffffff;
   border-radius: 50%;
 
   transform: translate(-50%, -50%);
-}
-
-.contactButton:hover .shield b,
-.contactActive .shield b {
-  background: #ffffff;
 }
 
 /* Mobile Button */
@@ -303,7 +274,7 @@
   height: 42px;
   padding: 0;
 
-  color: #ffffff;
+  color: #1A2B3C;
 
   background: transparent;
   border: 0;
@@ -315,8 +286,8 @@
   display: block;
 
   width: 24px;
-  height: 1px;
-  margin: 7px auto;
+  height: 2px;
+  margin: 6px auto;
 
   background: currentColor;
 
@@ -326,12 +297,12 @@
 }
 
 .menuButtonOpen span:first-child {
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   transform: rotate(45deg);
 }
 
 .menuButtonOpen span:last-child {
-  margin-top: 0;
+  margin-top: -2px;
   transform: rotate(-45deg);
 }
 
@@ -343,7 +314,7 @@
   }
 
   .navLink {
-    font-size: 0.62rem;
+    font-size: 0.82rem;
   }
 
   .contactButton {
@@ -358,9 +329,8 @@
   .header.scrolled {
     --header-height: 76px;
 
-    background: rgba(5, 5, 5, 0.86);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 20px rgba(19, 95, 167, 0.08);
   }
 
   .inner {
@@ -414,13 +384,7 @@
     visibility: hidden;
     opacity: 0;
 
-    background:
-      linear-gradient(
-        135deg,
-        rgba(37, 99, 235, 0.08) 0%,
-        transparent 50%
-      ),
-      #05080f;
+    background: #ffffff;
 
     pointer-events: none;
 
@@ -443,13 +407,13 @@
 
     padding-bottom: 24px;
 
-    color: rgba(255, 255, 255, 0.42);
+    color: #6B7280;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid #E5E9EF;
 
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
@@ -475,24 +439,23 @@
 
     padding: 15px 0;
 
-    color: rgba(255, 255, 255, 0.68);
+    color: #4A5568;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #E5E9EF;
 
-    font-family: Oswald, Arial, sans-serif;
-    font-size: clamp(2.4rem, 10vw, 4.3rem);
+    font-size: 1.1rem;
     font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 1;
+    letter-spacing: 0;
+    line-height: 1.4;
   }
 
   .navLink:first-child {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #E5E9EF;
   }
 
   .navLink.active,
   .navLink:hover {
-    color: #ffffff;
+    color: #135FA7;
   }
 
   .navLabel::after {
@@ -502,12 +465,11 @@
   .mobileNumber {
     display: block;
 
-    color: var(--blue-light, #60a5fa);
+    color: #135FA7;
 
-    font-family: Inter, sans-serif;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
   }
 
   .mobileContact {
@@ -517,21 +479,25 @@
 
     padding-top: 22px;
 
-    color: rgba(255, 255, 255, 0.5);
+    color: #6B7280;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid #E5E9EF;
 
-    font-size: 0.7rem;
+    font-size: 0.85rem;
   }
 
   .mobileContact span {
     margin-bottom: 5px;
 
-    color: var(--blue-light, #60a5fa);
+    color: #135FA7;
 
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
+  }
+
+  .mobileContact a {
+    color: #4A5568;
   }
 }
 
@@ -562,6 +528,6 @@
     grid-template-columns: 38px 1fr;
     padding: 13px 0;
 
-    font-size: clamp(2.2rem, 10.5vw, 3.35rem);
+    font-size: 1rem;
   }
 }

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- Shield Icon -->
+  <path d="M30 5L5 15V35C5 48 15 58 30 60C45 58 55 48 55 35V15L30 5Z" fill="#135FA7"/>
+  <path d="M30 10L10 18V35C10 45 18 53 30 55C42 53 50 45 50 35V18L30 10Z" fill="white"/>
+  <path d="M30 22L22 26V35C22 40 25 44 30 45C35 44 38 40 38 35V26L30 22Z" fill="#2D83D4"/>
+  
+  <!-- Company Name -->
+  <text x="68" y="26" font-family="'Space Grotesk', 'Arial', sans-serif" font-size="20" font-weight="700" fill="#135FA7" letter-spacing="1">S.W.A.T.</text>
+  <text x="68" y="44" font-family="'Inter', 'Arial', sans-serif" font-size="10" font-weight="500" fill="#2D83D4" letter-spacing="2">SICHERHEIT &amp; SERVICE</text>
+</svg>

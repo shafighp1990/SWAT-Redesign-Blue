@@ -68,7 +68,7 @@ export function Header() {
           aria-label="S.W.A.T. Startseite"
         >
           <img
-            src="/images/logo.jpg"
+            src="/images/logo-blue.svg"
             alt="S.W.A.T. Sicherheit & Service"
             className={styles.logo}
           />

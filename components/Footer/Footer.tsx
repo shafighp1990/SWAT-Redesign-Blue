@@ -13,26 +13,20 @@ export function Footer() {
   return (
     <footer className={styles.footer} id="footer">
       <div className={styles.frame}>
-        <div className={styles.topLine}>
-          <span>Oldenburg · Niedersachsen · Hamburg</span>
-          <span>Independent Security Company · Est. 2019</span>
-        </div>
-
         <div className={styles.statement}>
-          <span className={styles.index}>04 / Kontakt</span>
           <div className={styles.statementCopy}>
-            <p>Bereit, bevor es darauf ankommt.</p>
-            <h2>Sicherheit beginnt<span>mit einem Gespräch.</span></h2>
+            <h2>Bereit, bevor es darauf ankommt.</h2>
           </div>
           <Link href="/kontakt" className={styles.contactLink}>
-            <span>Projekt besprechen</span><b aria-hidden="true">↗</b>
+            Projekt besprechen
+            <b aria-hidden="true">↗</b>
           </Link>
         </div>
 
         <div className={styles.information}>
           <Link href="/" className={styles.brand} aria-label="S.W.A.T. Startseite">
-            <img src="/images/logo.jpg" alt="S.W.A.T. Sicherheit & Service" />
-            <span><strong>S.W.A.T.</strong>Sicherheit &amp; Service GmbH</span>
+            <img src="/images/logo-blue.svg" alt="S.W.A.T. Sicherheit & Service" />
+            <span><strong>S.W.A.T.</strong> Sicherheit &amp; Service GmbH</span>
           </Link>
           <nav className={styles.navigation} aria-label="Footer Navigation">
             <span className={styles.columnLabel}>Navigation</span>
@@ -52,7 +46,7 @@ export function Footer() {
         </div>
 
         <div className={styles.bottomLine}>
-          <span>© {new Date().getFullYear()} S.W.A.T. Sicherheit &amp; Service GmbH</span>
+          <span>© {new Date().getFullYear()} S.W.A.T. Sicherheit &amp; Service GmbH · Oldenburg</span>
           <a href="#top" aria-label="Zum Seitenanfang">Nach oben <i aria-hidden="true">↑</i></a>
         </div>
       </div>
